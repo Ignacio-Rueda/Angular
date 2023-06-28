@@ -11,6 +11,7 @@ export class AppComponent {
   registrado = false;
   nombre:String='';
   apellido:String='';
+  cargo:string="";
   //entradas : Array<Record<string,any>>=[];
   entradas:any;
  
@@ -28,6 +29,6 @@ export class AppComponent {
 
   registrarUsuario(){
     this.registrado=true;
-    this.mensaje="Usuario registrado correctamente con el nombre de: " + this.nombre+" "+ this.apellido;
+    this.mensaje="Usuario registrado con:";
   }
 }

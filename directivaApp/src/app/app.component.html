@@ -4,10 +4,17 @@
   <br/>
   <input type="text" name="apellido" [(ngModel)]="apellido">
   <br/>
+  <input type="text" name="cargo" [(ngModel)]="cargo">
+  <br/>
   <input type="submit" value="Registrar" (click)="registrarUsuario()">
 </form>
 <br/>
-<p *ngIf="registrado ;else sinRegistrar">{{mensaje}}</p>
+<p *ngIf="registrado ;else sinRegistrar">{{mensaje}}el nombre de{{nombre}} {{apellido}}
+  <!--CON ngStyle podemos determinar un atributo-->
+   <!--y tiene el cargo de <span [ngStyle]="{color:cargo=='director' ? 'red' : 'black'}">{{cargo}}</span></p>-->
+   <!--CON ngClass podemos añadirt más añadir mas propiedades con css-->
+   y tiene el cargo de <span [ngClass]="{paraDirectores:cargo=='director'}">{{cargo}}</span></p>
+
 <ng-template #sinRegistrar>
   <p>Usuario no registrado</p>
 </ng-template>
